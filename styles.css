@@ -1076,11 +1076,11 @@ h2 {
     #form {
         position: absolute;
         width: 28em;
-        margin: -72vh auto 0 3em;
+        margin: -100vh auto 0 3em;
         padding: 20px;
         align-items: center;
         justify-content: center;
-        min-height: 110vh;
+        min-height: 100vh;
         z-index: 20;
         background-color: #fff;
         border-radius: 4px;
