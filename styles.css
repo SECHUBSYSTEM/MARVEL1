@@ -80,7 +80,7 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
     justify-content: center;
-    background-image: url(/pattern-bg.svg);
+    background-image: url(pattern-bg.svg);
     display: flex;
 }
 
@@ -173,7 +173,7 @@ h2 {
     height: 120vh;
     position: absolute;
     z-index: 15;
-    background: url(/download.jpg);
+    background: url(download.jpg);
     margin: -120vh auto 0 auto;
     opacity: 0.7;
     background-repeat: no-repeat;
