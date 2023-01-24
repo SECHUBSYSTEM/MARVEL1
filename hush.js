@@ -20,6 +20,44 @@ const secondUsername = document.getElementById('secondusername');
 const country = document.getElementById('country');
 const f = document.querySelector('.form')
 const scrollEffect = document.querySelector('.menu')
+const rightFadeIn = document.querySelectorAll('.IU')
+const leftFadeIn = document.querySelectorAll('.IU1')
+const upFadeIn = document.querySelectorAll('.IU2')
+const rotateFadeIn = document.querySelectorAll('.IU3')
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+
+        entry.target.classList.toggle('show-1', entry.isIntersecting)
+        entry.target.classList.toggle('show-2', entry.isIntersecting)
+        entry.target.classList.toggle('show-3', entry.isIntersecting)
+        entry.target.classList.toggle('show-4', entry.isIntersecting)
+
+        /* if you don't want your site fading back out,uncomment the next line*/
+        if (entry.isIntersecting) observer.unobserve(entry.target)
+    })
+},
+    {
+        /*you can play around with the root, rootMargin depending on your site speed and networ speed*/
+        rootMargin: '-150px',
+        threshold: 0,
+    }
+
+)
+
+
+rightFadeIn.forEach(rightFade => {
+    observer.observe(rightFade)
+})
+leftFadeIn.forEach(leftFade => {
+    observer.observe(leftFade)
+})
+upFadeIn.forEach(upFade => {
+    observer.observe(upFade)
+})
+rotateFadeIn.forEach(rotateFade => {
+    observer.observe(rotateFade)
+})
 
 window.addEventListener('scroll', () => {
     if (window.scrollY < 20) {
